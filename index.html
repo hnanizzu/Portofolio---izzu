@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Arsip Karya - Hanan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Portofolio Arsip Karya Hanan</h1>
+    <p>Kumpulan karya seni intermedia & visual asap</p>
+  </header>
+
+  <!-- Slider -->
+  <div class="slider">
+    <div class="slides">
+      <div>
+        <img src="images/karya1.jpg" alt="Karya 1">
+        <div class="caption">Judul Karya 1 - Deskripsi singkat</div>
+      </div>
+      <div>
+        <img src="images/karya2.jpg" alt="Karya 2">
+        <div class="caption">Judul Karya 2 - Catatan proses</div>
+      </div>
+      <div>
+        <img src="images/karya3.jpg" alt="Karya 3">
+        <div class="caption">Judul Karya 3 - Refleksi pribadi</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Hanan. Semua hak cipta dilindungi.</p>
+  </footer>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const totalSlides = slides.children.length;
+    let index = 0;
+
+    function showSlide() {
+      index++;
+      if (index >= totalSlides) index = 0;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    setInterval(showSlide, 4000); // ganti gambar tiap 4 detik
+  </script>
+</body>
+</html>
